@@ -1,7 +1,8 @@
 
-Archy-rs is an blazingly 🔥🚀 fast rust 🦀 based arch install script that automates to process of the installation of arch linux.
+Archy-rs is an blazingly 🔥🚀 fast rust 🦀 based arch install script.
 
 Features:
+    
     ~Beginner friendly;
 
     Privacy in mind;
@@ -12,4 +13,5 @@ Features:
 
 
 TODO:
+
     Encryption AES256, LVM, Multi-user option.
