@@ -1,7 +1,6 @@
 // Archy-rs 1.0.0 alpha!
 
 #[allow(unused_imports)]
-
 use std::{fs, process::Command};
 
 fn main() {
@@ -13,25 +12,26 @@ fn main() {
               | - |   |   /  | (__   | __ |   \ V /  
               |_|_|   |_|_\   \___|  |_||_|   _|_|_  
 
+              FORK ME! Customize your archy-rs program.
 
             ## Its mandatory to run this in an bash shell; /usr/bin/bash ##
 
-            ## Its mandatory to partition an drive in this order; 1GB Boot, ?GB Swap, ?GB Root to install arch ##
+            ## Its mandatory to partition an drive in this order; 1GB Boot, [...]GB Swap, [...]GB Root to install arch ##
 
-            ./archy -drive=[?] -de=[?] -gr=[?] -root=[?] -user=[?] -pass=[?]
+            ./archy -drive=[...] -de=[...] -gr=[...] -root=[...] -user=[...] -pass=[...]
 
             Use -drive to install arch linux on any particular drive, such as nvme[]n[], vda[], or sda[].
             Use -de to install an Desktop enviroment onto arch linux, such as plasma, gnome, xfce4, or lxqt.
             Use -gr to install greeter session, such as sddm, lightdm, gdm(More suited for gnome), or lxdm.
-            Use -root to setup an root password for installing software and/or manage the arch linux operating system.
+            Use -root to setup an root password for installing software and/or managing the arch linux operating system.
             Use -user to setup an user account.
             Use -pass to setup the user's password.
 
-            Features:                                                                   ⊂(◉‿◉⊂)
+            Features:
             ~Beginner friendly;
             Privacy in mind;
             Blackarch & chaotic repos;
-            Software/Scripts pre-installed, such as ./dev.sh ./pen.sh ./host.sh;
+            Software/Scripts pre-installed, $HOME/../..;
 
             TODO: Encryption AES-256, LVM, Multi-user option.
         "
@@ -74,8 +74,6 @@ fn main() {
         }
 
         for _char in arg.chars() {
-
-
             match _char {
                 '[' => _semibool = true,
                 ']' => _semibool = false,
@@ -306,28 +304,37 @@ pacman -Syu
 sudo pacman -S --noconfirm librewolf tor-browser qbittorrent
 
 # Software/Exploit tools & development
-sudo pacman -S --noconfirm vscodium vscodium-marketplace rustup python msf-mpc
+sudo pacman -S --noconfirm vscodium vscodium-marketplace rustup python2 python3 neovim msf-mpc evilpdf evilclippy
 # Compiling tools
 sudo pacman -S --noconfirm cmake gcc clang llvm
 # Bruteforcing/dictatornary tools
-sudo pacman -S --noconfirm hydra cracken
+sudo pacman -S --noconfirm hydra medusa legba hashcat hashcat-utils cracken bopscrk
 # Fuzzing tools
-sudo pacman -S --noconfirm valgrind aflplusplus
+sudo pacman -S --noconfirm aflplusplus wfuzz
 # Debugging tools
-sudo pacman -S --noconfirm gdb pwndbg rr
+sudo pacman -S --noconfirm gdb
 # Forensic tools
 sudo pacman -S --noconfirm volatility3 volatility-extra virustotal
 # Reverse-Engineering tools & decompilers
 sudo pacman -S --noconfirm rizin rz-cutter rz-ghidra retdec
 
+# Useful for cracking hashes
+
+mkdir -p $HOME/Desktop/wordlist
+git clone https://github.com/kkrypt0nn/wordlists $HOME/Desktop/wordlist/krp-wordlist
+git clone https://github.com/kennyn510/wpa2-wordlists $HOME/Desktop/wordlist/ken-wordlist
+
 # OSINT
-sudo pacman -S --noconfirm sherlock udork
+sudo pacman -S --noconfirm 
 
 # OPSEC
-sudo pacman -S --noconfirm torctl onionshare darkdump usb-canary
+sudo pacman -S --noconfirm proxychains-ng torctl onionshare
 
 # Networking
-sudo pacman -S --noconfirm bettercap beef
+sudo pacman -S --noconfirm nmap arp-scan aircrack-ng
+
+# Web
+sudo pacman -S --noconfirm burpsuite zaproxy nikto amass evilginx
 
 rustup default stable
 
