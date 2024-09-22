@@ -11,11 +11,6 @@
 
     Software/Scripts pre-installed, such as ./dev.sh ./pen.sh ./host.sh
 
-
-# TODO:
-
-    Encryption AES256, LVM, Multi-user option.
-
 # Usage:
 
     git clone https://github.com/PEzwarts/Archy-rs
