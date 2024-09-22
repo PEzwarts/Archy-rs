@@ -1,7 +1,7 @@
 
-Archy-rs is an blazingly 🔥🚀 fast rust 🦀 based arch install script.
+## Archy-rs is an blazingly 🔥🚀 fast rust 🦀 based arch install script.
 
-Features:
+# Features:
     
     ~Beginner friendly;
 
@@ -12,15 +12,18 @@ Features:
     Software/Scripts pre-installed, such as ./dev.sh ./pen.sh ./host.sh
 
 
-TODO:
+# TODO:
 
     Encryption AES256, LVM, Multi-user option.
 
-Usage:
+# Usage:
 
     git clone https://github.com/PEzwarts/Archy-rs
     cd ./Archy-rs
-    cargo build
+    RUSTFLAGS='-C target-feature=+crt-static' cargo build --release
 
-    Put the bin file inside of an USB stick of your choice. Boot into the arch linux enviroment. Create an folder, such as ./mnt/. Mount the USB stick onto the folder. Run /usr/bin/bash. Run ./Archy-rs bin file inside of your USB stick with the custom parameters.
-    
+    1. Put the ELF binary executable inside of an USB stick of your choice
+    2. Boot into the Arch linux enviroment
+    3. Create an folder, such as ./mnt/
+    4. Mount the USB stick onto the folder
+    5. Run ./Archy-rs ELF binary executable inside of your USB stick
