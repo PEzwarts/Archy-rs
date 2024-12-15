@@ -1,4 +1,4 @@
-// Archy-rs 1.3.0
+// Archy-rs 1.3.1
 
 use std::{env::args, fs, process::{exit, Command}};
 use text_io::read;
@@ -45,6 +45,7 @@ fn main() {
         }
     }
 
+    Command::new("lsblk").status().unwrap();
     print!("DRIVE: ");
     let drive: String = read!();
     print!("ROOT_PASSWD: ");
@@ -75,7 +76,7 @@ Include = /etc/pacman.d/chaotic-mirrorlist
 echo '## BLACKARCH AUR ##'
 
 curl -O https://blackarch.org/strap.sh
-echo 26849990b35a42e6e192c6d9ed8c46f0d6d06047 strap.sh | sha1sum -c
+echo bbf0a0b838aed0ec05fff2d375dd17591cbdf8aa strap.sh | sha1sum -c
 chmod u+x strap.sh
 ./strap.sh
     "####));
